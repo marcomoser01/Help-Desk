@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+    <!-- <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="isHandset$ | async">
+        <mat-toolbar>
+            <span routerLink="/" (click)="navbarService.sendNext('main', true)" class="aligndown">
+                <mat-icon>home</mat-icon>Menu
+            </span>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a mat-list-item routerLink="dashboard" (click)="drawer.toggle()">
+                <mat-icon class="aligndownMenu">group</mat-icon>
+                Dashboard
+            </a>
+            <a mat-list-item routerLink="add" (click)="drawer.toggle()">
+                <mat-icon class="aligndownMenu">group</mat-icon>
+                Aggiungi
+            </a>
+        </mat-nav-list>
+    </mat-sidenav> -->
+
+    <mat-sidenav-content>
+        <mat-toolbar class="barra">
+            
+            <span routerLink="/" (click)="navbarService.sendNext('main', true)" class="aligndown abcd"><mat-icon>home</mat-icon>GPI Ticketing
+            </span>
+            <span class="fillSpace"></span>
+            <span class="buttons">
+                <button mat-raised-button routerLink="dashboard" class="button">
+                    Dashboard
+                </button>
+                <button mat-raised-button routerLink="add" class="button">
+                    Aggiungi
+                </button>
+            </span>
+        </mat-toolbar>
+    </mat-sidenav-content>
+</mat-sidenav-container>

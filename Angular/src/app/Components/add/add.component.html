@@ -1,0 +1,143 @@
+<form [formGroup]="ticketfrm" (ngSubmit)="onSubmit()">
+
+    <mat-card>
+        <mat-card-header class="grid-header">
+            <mat-card-title>Nuovo Ticket</mat-card-title>
+            <mat-card-subtitle>Compilare i campi sotto indicati</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content class="container-grid">
+            <input type="input" id="id" placeholder="id" formControlName="id" hidden />
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>Username </mat-label>
+                    <input matInput id="username" placeholder="Username" formControlName="username" />
+                    <mat-error *ngIf="ticketfrm.controls['username'].invalid &&
+                    (ticketfrm.controls['username'].dirty || ticketfrm.controls['username'].touched) ">
+                        {{getErrorMessage_field('username')}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>ip_caller </mat-label>
+                    <input matInput id="ip_caller" placeholder="ip_caller" formControlName="ip_caller" />
+                    <mat-error *ngIf="ticketfrm.controls['ip_caller'].invalid &&
+                    (ticketfrm.controls['ip_caller'].dirty || ticketfrm.controls['ip_caller'].touched) ">
+                        {{getErrorMessage_field('ip_caller')}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>ip_server </mat-label>
+                    <input matInput id="ip_server" placeholder="ip_server" formControlName="ip_server" />
+                    <mat-error *ngIf="ticketfrm.controls['ip_server'].invalid &&
+                    (ticketfrm.controls['ip_server'].dirty || ticketfrm.controls['ip_server'].touched) ">
+                        {{getErrorMessage_field('ip_server')}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>url_path_server </mat-label>
+                    <input matInput id="url_path_server" placeholder="url_path_server"
+                        formControlName="url_path_server" />
+                    <!-- <mat-error *ngIf="ticketfrm.controls['url_path_server'].invalid &&
+                    (ticketfrm.controls['url_path_server'].dirty || ticketfrm.controls['url_path_server'].touched) ">
+                        {{getErrorMessage_field('url_path_server')}}
+                    </mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>patient </mat-label>
+                    <input matInput id="patient" placeholder="patient" formControlName="patient" />
+                    <mat-error *ngIf="ticketfrm.controls['patient'].invalid &&
+                    (ticketfrm.controls['patient'].dirty || ticketfrm.controls['patient'].touched) ">
+                        {{getErrorMessage_field('patient')}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>hospital </mat-label>
+                    <input matInput id="hospital" placeholder="hospital" formControlName="hospital" />
+                    <!-- <mat-error *ngIf="ticketfrm.controls['hospital'].invalid &&
+                    (ticketfrm.controls['hospital'].dirty || ticketfrm.controls['prezzo'].touched) ">
+                        {{getErrorMessage_field('hospital')}}
+                    </mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>department </mat-label>
+                    <input matInput id="department" placeholder="department" formControlName="department" />
+                    <!-- <mat-error *ngIf="ticketfrm.controls['department'].invalid &&
+                    (ticketfrm.controls['department'].dirty || ticketfrm.controls['department'].touched) ">
+                        {{getErrorMessage_field('department')}}
+                    </mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>description </mat-label>
+                    <input matInput id="description" placeholder="description" formControlName="description" />
+                    <!-- <mat-error *ngIf="ticketfrm.controls['description'].invalid &&
+                    (ticketfrm.controls['description'].dirty || ticketfrm.controls['description'].touched) ">
+                        {{getErrorMessage_field('description')}}
+                    </mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>attachment </mat-label>
+                    <input matInput id="attachment" placeholder="attachment" formControlName="attachment" />
+                    <!-- <mat-error *ngIf="ticketfrm.controls['attachment'].invalid &&
+                    (ticketfrm.controls['attachment'].dirty || ticketfrm.controls['attachment'].touched) ">
+                        {{getErrorMessage_field('attachment')}}
+                    </mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>attachment_type </mat-label>
+                    <input matInput id="attachment_type" placeholder="attachment_type"
+                        formControlName="attachment_type" />
+                    <!-- <mat-error *ngIf="ticketfrm.controls['attachment_type'].invalid &&
+                    (ticketfrm.controls['attachment_type'].dirty || ticketfrm.controls['attachment_type'].touched) ">
+                        {{getErrorMessage_field('attachment_type')}}
+                    </mat-error> -->
+                </mat-form-field>
+            </div>
+
+            <div class="item-grid">
+                <mat-form-field appearance="fill">
+                    <mat-label>valid </mat-label>
+                    <input matInput id="valid" placeholder="valid" formControlName="valid" />
+                    <mat-error *ngIf="ticketfrm.controls['valid'].invalid &&
+                    (ticketfrm.controls['valid'].dirty || ticketfrm.controls['valid'].touched) ">
+                        {{getErrorMessage_field('valid')}}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button mat-raised-button class="btn-salva" type="submit" [disabled]="!ticketfrm.valid">Salva</button>
+            <button mat-raised-button color="basic" (click)="annulla()">Annulla</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

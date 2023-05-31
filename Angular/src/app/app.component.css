@@ -1,0 +1,8 @@
+.libreria_container {
+    height: 100%;
+}
+
+.container_app {
+    height: inherit;
+    background: grey;
+}

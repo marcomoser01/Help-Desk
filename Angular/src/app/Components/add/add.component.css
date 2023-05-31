@@ -1,0 +1,71 @@
+:host {
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: calc(100vh - 64px);
+    padding: 1rem;
+}
+
+.mat-mdc-card {
+    border-radius: 12px;
+}
+
+.mdc-card__actions {
+    padding: 0 1rem 1rem 1rem;
+}
+
+h2,
+h2+div {
+    margin: 0 auto;
+    text-align: center;
+    width: max-content;
+}
+
+.mat-mdc-form-field {
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 1rem;
+}
+
+.example-container mat-form-field+mat-form-field {
+    margin-left: 8px;
+}
+
+.example-right-align {
+    text-align: right;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+}
+
+form .mdc-button:first-of-type {
+    margin-right: 1rem;
+}
+
+.grid-header {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colonne con la stessa larghezza */
+    grid-gap: 10px;
+    /* Spazio tra gli elementi (puoi personalizzarlo come preferisci) */
+}
+
+.item-grid {
+    padding: 10px;;
+}
+
+.btn-salva {
+    background: orange !important;
+    color: purple !important;
+}

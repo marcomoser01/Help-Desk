@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.114",
+    "cors": "^2.8.5",
+    "mysql2": "^3.2.1"
+  }
+}

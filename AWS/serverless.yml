@@ -1,0 +1,44 @@
+service: lambda-marco
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  iam:
+    #role: arn:aws:iam::924779871934:role/LabRole
+    role: arn:aws:iam::790462469780:role/LabRole
+
+
+functions:
+  getTicket:
+    handler: functions/get.getTicket
+    events:
+      - http:
+          path: /api/get-ticket
+          method: get
+          cors: true
+
+  insertTicket:
+    handler: functions/insert.insertTicket
+    events:
+      - http:
+          path: /api/insert-ticket
+          method: post
+          cors: true
+
+  deleteTicket:
+    handler: functions/delete.deleteTicket
+    events:
+      - http:
+          path: /api/delete-ticket/{id}
+          method: delete
+          cors: true
+          
+  updateTicket:
+    handler: functions/update.updateTicket
+    events:
+      - http:
+          path: /api/update-ticket/{id}
+          method: put
+          cors: true

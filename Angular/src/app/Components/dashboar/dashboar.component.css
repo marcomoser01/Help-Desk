@@ -1,0 +1,82 @@
+.libreria_dashboard_container {
+    display: grid;
+    place-items: center;
+    place-content: center;
+    height: calc(100vh - 64px);
+    padding: 1rem;
+    /* background-image: url("../../../image/book_wallpaper.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; */
+}
+
+.wrapper {
+    align-self: start;
+}
+
+.table-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 1px 2px 7px grey;
+}
+
+.demo-table {
+    box-shadow: none;
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+tr.mat-mdc-table .mdc-data-table__row {
+    min-height: 52px !important;
+}
+
+.mat-cell,
+.mat-header-cell {
+    padding-right: 1rem;
+}
+
+.mat-header-cell {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.mat-column-demo-position {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+}
+
+.mat-column-demo-name {
+    padding-left: 16px;
+    font-size: 20px;
+}
+
+.mat-column-demo-weight {
+    font-style: italic;
+}
+
+.mat-column-demo-symbol {
+    width: 32px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mat-column-demo-bot:not(.mat-header-cell) {
+    display: flex;
+    gap: 1rem;
+    padding-block: 1rem;
+}
+
+.btnInTableWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.mat-mdc-raised-button {
+    min-width: 6rem;
+}

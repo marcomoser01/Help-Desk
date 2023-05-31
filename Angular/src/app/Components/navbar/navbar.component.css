@@ -1,0 +1,26 @@
+.abcd {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.button {
+    background: orange !important;
+    color: purple !important;
+}
+
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.barra {
+    background: purple;
+    color: orange;
+}
